@@ -17,7 +17,7 @@ function App() {
 
   const clearResults = (e) => {
     if (e.target.value.length === 0) {
-      dispatch(getSearchResults(e.target.value.length + 1, e.target.value))
+      dispatch(getSearchResults(e.target.value.length, e.target.value))
     }
   }
 
@@ -34,7 +34,7 @@ function App() {
         <input
           className="maininput"
           type='text'
-          onKeyUp={e => dispatch(getSearchResults(e.target.value.length + 1, e.target.value))}
+          onKeyUp={e => dispatch(getSearchResults(e.target.value.length, e.target.value))}
           onChange={clearResults}
           ref={inputRef}
         />
