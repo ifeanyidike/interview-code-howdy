@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getSearchResults } from './redux/actions/actions';
 import Header from './components/Header';
@@ -29,12 +29,11 @@ function App() {
     <div className="app">
       <Header />
 
-
       <div className='maininputdiv'>
         <input
           className="maininput"
           type='text'
-          onKeyUp={e => dispatch(getSearchResults(e.target.value.length, e.target.value))}
+          onKeyUp={e => dispatch(getSearchResults(e.target.value.length + 1, e.target.value))}
           onChange={clearResults}
           ref={inputRef}
         />
