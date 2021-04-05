@@ -35,3 +35,11 @@ header{
   width: 60%;
 }
 
+.displaypanel .result{
+  margin-top: 15px;
+}
+
+.displaypanel .result *{
+  margin-top: 5px;
+}
+

@@ -47,7 +47,7 @@ function App() {
             :
             result.length > 0 ?
               result.map(({ title, author }, index) => (
-                <div key={index}>
+                <div className='result' key={index}>
                   <h2>{title}</h2>
                   <p>First Name: {author.firstName}</p>
                   <p>Last Name: {author.surname}</p>
