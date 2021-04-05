@@ -11,9 +11,10 @@ export const getSearchResults = (numOfChar, text) => (dispatch) => {
             payload: "Please type at least 3 characters"
         })
     } else {
-
+        //filter results from our list. 
+        //select data where title (in lower case) matches our text (in lower case)
         const result = data.filter(d => d.title.toLowerCase().includes(text.toLowerCase()))
-        console.log(text)
+
         dispatch({
             type: GET_SEARCH_RESULTS,
             payload: result
